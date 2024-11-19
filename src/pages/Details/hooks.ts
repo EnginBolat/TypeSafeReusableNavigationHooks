@@ -1,11 +1,15 @@
-import { useMainNavigation } from '../../hooks';
+import { useMainRouter } from '../../hooks';
 
 const Hooks = () => {
-    const { navigation } = useMainNavigation();
-    const navigateToDetails = (id: number) => navigation.navigate('Details', { id: id });
+    const { params } = useMainRouter('Details');
+    const incomingId = params.id;
+    // OR
+    const { id } = params;
+
 
     return {
-        navigateToDetails,
+        id,
+        incomingId,
     };
 };
 

@@ -14,7 +14,7 @@ const MainNavigation = () => {
   const StackNavigation = createNativeStackNavigator<MainNavigationParams>();
 
   return (
-    <StackNavigation.Navigator>
+    <StackNavigation.Navigator initialRouteName="Home">
       <StackNavigation.Screen name="Onboard" component={Onboard} />
       <StackNavigation.Screen name="Home" component={Home} />
       <StackNavigation.Screen name="Details" component={Details} />
